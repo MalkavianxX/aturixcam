@@ -14,7 +14,67 @@
 
 {% block content %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script>
+    const storedTheme = 'dark';
 
+const getPreferredTheme = () => {
+    if (storedTheme) {
+        return storedTheme
+    }
+    // Si no hay un tema almacenado, devuelve el tema por defecto.
+    return 'light' // Cambia 'light' por el tema que quieras establecer por defecto.
+}
+
+const setTheme = function (theme) {
+    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark')
+    } else {
+        document.documentElement.setAttribute('data-bs-theme', theme)
+    }
+}
+
+setTheme(getPreferredTheme())
+
+window.addEventListener('DOMContentLoaded', () => {
+    var el = document.querySelector('.theme-icon-active');
+
+    if (el != 'undefined' && el != null) {
+        const showActiveTheme = theme => {
+            const activeThemeIcon = document.querySelector('.theme-icon-active use')
+            const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+            const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+            document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                element.classList.remove('active')
+            })
+
+            btnToActive.classList.add('active')
+            activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (storedTheme !== 'light' || storedTheme !== 'dark') {
+                setTheme(getPreferredTheme())
+            }
+        })
+
+        showActiveTheme(getPreferredTheme())
+
+        document.querySelectorAll('[data-bs-theme-value]')
+            .forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const theme = toggle.getAttribute('data-bs-theme-value')
+                    localStorage.setItem('theme', theme)
+                    setTheme(theme)
+                    showActiveTheme(theme)
+                })
+            })
+
+    }
+})
+
+
+</script>
 <style>
     body {
         margin: 0;
@@ -356,7 +416,7 @@
                                     <div class="d-md-flex my-4 w-100 mb-3">
                                         <!-- Avatar -->
                                         <div class="mt-3 ms-2 avatar avatar-lg me-3 flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" loading="lazy" src="{{item.user.avatar_url}}"
+                                            <img class="avatar-img rounded-circle" src="{{item.user.avatar_url}}"
                                                 alt="avatar">
                                         </div>
                                         <!-- Text -->
@@ -401,7 +461,6 @@
                 <aside class="col-xl-5 order-xl-2">
                     <div>
                         <div class="mb-4  ">
-                            <h3 class="mb-lg-3 ">Clima</h3>
 
                             <div class="card shadow rounded-3 overflow-hidden">
                                 <a class="weatherwidget-io" href="https://forecast7.com/es/20d18n98d06/huauchinango/"
@@ -427,7 +486,7 @@
                                         <div class="card card-img-scale overflow-hidden bg-transparent">
                                             <div class="card-img-scale-wrapper rounded-3">
                                                 <!-- Card Image -->
-                                                <img loading="lazy" src="https://turixcam-images.b-cdn.net/Huauchinango/hoteles/hotal%20meson.jpg"
+                                                <img src="https://turixcam-images.b-cdn.net/Huauchinango/hoteles/hotal%20meson.jpg"
                                                     class="card-img" alt="">
                                                 <!-- Overlay -->
                                                 <div class="card-img-overlay d-flex flex-column z-index-1 p-4 ">
@@ -490,7 +549,7 @@
 
                             <div class="card-img-scale-wrapper ">
                                 <!-- Image -->
-                                <img loading="lazy" src="{% static 'login/assets/images/category/hotel/04.jpg' %} "
+                                <img src="{% static 'login/assets/images/category/hotel/04.jpg' %} "
                                     class="card-img border-top" alt="hotel image">
                                 <!-- Badge -->
                                 <div class="position-absolute bottom-0 start-0 p-3">
@@ -524,7 +583,7 @@
                             <!-- Image and overlay -->
                             <div class="card-img-scale-wrapper ">
                                 <!-- Image -->
-                                <img  loading="lazy" src="{% static 'login/assets/images/category/hotel/03.jpg' %} "
+                                <img  src="{% static 'login/assets/images/category/hotel/03.jpg' %} "
                                     class="card-img  border-top" alt="hotel image">
                                 <!-- Badge -->
                                 <div id="tiempo" class="position-absolute  top-0 end-0 ">
@@ -560,7 +619,7 @@
                             <!-- Image and overlay -->
                             <div class="card-img-scale-wrapper ">
                                 <!-- Image -->
-                                <img  loading="lazy"  src="{% static 'login/assets/images/category/hotel/02.jpg' %} "
+                                <img   src="{% static 'login/assets/images/category/hotel/02.jpg' %} "
                                     class="card-img border-top" alt="hotel image">
                                 <!-- Badge -->
                                 <div class="position-absolute bottom-0 start-0 p-3">
@@ -590,7 +649,7 @@
                             <!-- Image and overlay -->
                             <div class="card-img-scale-wrapper ">
                                 <!-- Image -->
-                                <img  loading="lazy"  src="{% static 'login/assets/images/category/hotel/bitmap.webp' %} "
+                                <img   src="{% static 'login/assets/images/category/hotel/bitmap.webp' %} "
                                     class="card-img border-top" alt="Huauchinango">
                                 <!-- Badge -->
                                 <div class="position-absolute bottom-0 start-0 p-3">
@@ -620,7 +679,7 @@
                             <!-- Image and overlay -->
                             <div class="card-img-scale-wrapper">
                                 <!-- Image -->
-                                <img  loading="lazy"  src="{% static 'login/assets/images/category/hotel/04.jpg' %} "
+                                <img   src="{% static 'login/assets/images/category/hotel/04.jpg' %} "
                                     class="card-img border-top" alt="hotel image">
                                 <!-- Badge -->
                                 <div class="position-absolute bottom-0 start-0 p-3">
@@ -649,7 +708,7 @@
                             <!-- Image and overlay -->
                             <div class="card-img-scale-wrapper ">
                                 <!-- Image -->
-                                <img  loading="lazy"  src="{% static 'login/assets/images/category/hotel/03.jpg' %} "
+                                <img   src="{% static 'login/assets/images/category/hotel/03.jpg' %} "
                                     class="card-img  border-top" alt="hotel image">
                                 <!-- Badge -->
                                 <div class="position-absolute bottom-0 start-0 p-3">
@@ -679,7 +738,7 @@
                             <!-- Image and overlay -->
                             <div class="card-img-scale-wrapper ">
                                 <!-- Image -->
-                                <img  loading="lazy"  src="{% static 'login/assets/images/category/hotel/02.jpg' %} "
+                                <img   src="{% static 'login/assets/images/category/hotel/02.jpg' %} "
                                     class="card-img border-top" alt="hotel image">
                                 <!-- Badge -->
                                 <div class="position-absolute bottom-0 start-0 p-3">
@@ -710,7 +769,7 @@
                             <div class="card-img-scale-wrapper ">
 
                                 <!-- Image -->
-                                <img  loading="lazy"  src="{% static 'login/assets/images/category/hotel/bitmap.webp' %} "
+                                <img   src="{% static 'login/assets/images/category/hotel/bitmap.webp' %} "
                                     class="card-img border-top" alt="Huauchinango">
                                 <!-- Badge -->
                                 <div class="position-absolute bottom-0 start-0 p-3">
