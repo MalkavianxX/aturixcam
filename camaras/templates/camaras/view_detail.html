@@ -19,14 +19,12 @@
     body {
         margin: 0;
         height: 100%;
-        background-image: url("https://turixcam-images.b-cdn.net/fondomd.jpg");
+        background-image: url("https://turixcam-images.b-cdn.net/Huauchinango/huachinango.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size:cover;
     }
-    .navbar-nav > li > a {
-    color:  black !important;
-}
+
     #myVideo {
         position: fixed;
         right: 0;
@@ -102,44 +100,26 @@
     h1,h2,h3,h4,h5,h6{
         color: white !important;
     }
-    .sticky-video {
-    position: sticky;
-    
-    z-index: 9999;
-}
-
 </style>
 <!-- **************** MAIN CONTENT START **************** -->
-<script>
-window.addEventListener('orientationchange', function() {
-    var orientation = window.orientation;
-    switch(orientation) {
-        case 0:
-        case 180:
-            console.log('Modo vertical');
-            break;
-        case 90:
-        case -90:
-            console.log('Modo horizontal');
-            break;
-    }
-});
 
-
-</script>
 <main>
     {% csrf_token %}
 
 
     <!-- =======================
 	Image gallery START -->
-    <section class="sticky-video">
+    <section class="card-grid pt-0">
         <div class="container">
             <div class="row ">
                 <!-- Image -->
-                <div class="col-12 d-flex justify-content-center " style="border-radius: 15px;">
+                <div class="col-12 d-flex justify-content-center" style="border-radius: 15px;">
                     <div class="ratio ratio-16x9">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/UtZjzhheXGQ?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/LfE-vF1wVt0?si=DGa9kjLqi79M03ZB"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
 
