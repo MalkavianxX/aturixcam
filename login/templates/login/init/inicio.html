@@ -121,9 +121,7 @@
     .titulo-sm{
         font-size: 3.7rem;
     }
-    .logo-sm{
-        width: 50% !important;
-    }
+
     @media screen and (max-width: 600px) {
 
     .sep-sm-6 {
@@ -133,7 +131,7 @@
         font-size: -webkit-xxx-large;
     }
     .logo-sm{
-        width: 100% !important;
+        width: 80% !important;
     }
 }
 @keyframes pulse {
@@ -144,6 +142,9 @@
 
 @keyframes explode {
     /* Define tu animación de explosión aquí */
+}
+.navbar-nav > li > a {
+    color:  black !important;
 }
 </style>
 
@@ -212,7 +213,7 @@ window.onscroll = function () {
 <main>
 
 
-    <section class=" d-flex justify-content-center align-items-center mt-xl-0 mt-5 " style="height: 80vh; margin-bottom: 10vh;">
+    <section class=" d-flex justify-content-center align-items-center " style="height: 75vh; margin-bottom: 25vh;">
         <div class="container sep-sm-6">
             <!-- Content and Image START -->
             <div class="row ">
@@ -229,7 +230,7 @@ window.onscroll = function () {
 
                 <!-- Image -->
                 <div class="col-lg-5 icon_float_init z-0 position-relative text-center">
-                    <img style="filter: brightness(0.90);" id="globo_init" class="img-fluid"
+                    <img style="filter: brightness(0.90); width: 75%;" id="globo_init" class="img-fluid" 
                         src="https://turixcam-images.b-cdn.net/Backgrounds/inicio/globo.png" alt="">
 
                 </div>
@@ -272,234 +273,17 @@ window.onscroll = function () {
                             <!-- Card body -->
                             <div class="card-body px-2 border-bottom bg-white-offs">
                                 <!-- Title -->
-                                <h5 class="card-title"><a href="#" class="stretched-link">La
-                                        estrella</a></h5>
+                                <h5 class="card-title"><a href="#" class="stretched-link">Clinica PEMEX</a></h5>
                                 <!-- Price and rating -->
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">Muy pronto <small class="fw-light"></small>
+                                    <h6 class="text-success mb-0"> <small class="fw-light"></small>
                                     </h6>
                                     <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i></h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <!-- Card START -->
-                        <div class="card card-img-scale overflow-hidden bg-transparent">
-                            <!-- Image and overlay -->
-                            <div class="card-img-scale-wrapper ">
-                                <!-- Image -->
-                                <img src="{% static 'login/assets/images/category/hotel/03.jpg' %} "
-                                    class="card-img  border-top" alt="hotel image">
-                                <!-- Badge -->
-                                <div id="tiempo" class="position-absolute  top-0 end-0 ">
-                                    <div class="badge  fs-5  stretched-link text-center"
-                                        style="border-radius: 0 0 0 25px !important; background: linear-gradient(to right, #2b90cf, rgb(0, 149, 255))">
-                                        16° <i class="bi bi-cloud-drizzle me-2"></i> </div>
-                                </div>
-                                <div class="position-absolute bottom-0 start-0 p-3">
-                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i
-                                            class="bi bi-geo-alt me-2"></i>Oaxaca</div>
-                                </div>
 
-                            </div>
-
-                            <!-- Card body -->
-                            <div class="card-body bg-white-offs border-bottom px-2">
-                                <!-- Title -->
-                                <h5 class="card-title"><a href="" class="stretched-link">Centro</a>
-                                </h5>
-                                <!-- Price and rating -->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">Muy pronto <small class="fw-light"></small>
-                                    </h6>
-                                    <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card END -->
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- Card START -->
-                        <div class="card card-img-scale overflow-hidden bg-transparent">
-                            <!-- Image and overlay -->
-                            <div class="card-img-scale-wrapper ">
-                                <!-- Image -->
-                                <img src="{% static 'login/assets/images/category/hotel/02.jpg' %} "
-                                    class="card-img border-top" alt="hotel image">
-                                <!-- Badge -->
-                                <div class="position-absolute bottom-0 start-0 p-3">
-                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i
-                                            class="bi bi-geo-alt me-2"></i>Verazcruz</div>
-                                </div>
-                            </div>
-
-                            <!-- Card body -->
-                            <div class="card-body px-2  bg-white-offs  border-bottom">
-                                <!-- Title -->
-                                <h5 class="card-title"><a href="#" class="stretched-link">Playa de
-                                        Casitas</a></h5>
-                                <!-- Price and rating -->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">Muy pronto <small class="fw-light"></small>
-                                    </h6>
-                                    <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card END -->
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- Card START -->
-                        <div class="card card-img-scale overflow-hidden bg-transparent">
-                            <!-- Image and overlay -->
-                            <div class="card-img-scale-wrapper ">
-                                <!-- Image -->
-                                <img src="{% static 'login/assets/images/category/hotel/bitmap.webp' %} "
-                                    class="card-img border-top" alt="Huauchinango">
-                                <!-- Badge -->
-                                <div class="position-absolute bottom-0 start-0 p-3">
-                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i
-                                            class="bi bi-geo-alt me-2"></i>Huauchinango</div>
-                                </div>
-                            </div>
-
-                            <!-- Card body -->
-                            <div class="card-body px-2 border-bottom bg-white-offs">
-                                <!-- Title -->
-                                <h5 class="card-title"><a href="{% url 'view_detail_camara' %}"
-                                        class="stretched-link">Centro
-                                        - Desfile</a></h5>
-                                <!-- Price and rating -->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">$0 <small class="fw-light">/ vista gratuita</small>
-                                    </h6>
-                                    <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card END -->
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card card-img-scale overflow-hidden bg-transparent">
-                            <!-- Image and overlay -->
-                            <div class="card-img-scale-wrapper">
-                                <!-- Image -->
-                                <img src="{% static 'login/assets/images/category/hotel/04.jpg' %} "
-                                    class="card-img border-top" alt="hotel image">
-                                <!-- Badge -->
-                                <div class="position-absolute bottom-0 start-0 p-3">
-                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i
-                                            class="bi bi-geo-alt me-2"></i>Puebla</div>
-                                </div>
-                            </div>
-
-                            <!-- Card body -->
-                            <div class="card-body px-2 border-bottom bg-white-offs">
-                                <!-- Title -->
-                                <h5 class="card-title"><a href="#" class="stretched-link">La
-                                        estrella</a></h5>
-                                <!-- Price and rating -->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">Muy pronto <small class="fw-light"></small>
-                                    </h6>
-                                    <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- Card START -->
-                        <div class="card card-img-scale overflow-hidden bg-transparent">
-                            <!-- Image and overlay -->
-                            <div class="card-img-scale-wrapper ">
-                                <!-- Image -->
-                                <img src="{% static 'login/assets/images/category/hotel/03.jpg' %} "
-                                    class="card-img  border-top" alt="hotel image">
-                                <!-- Badge -->
-                                <div class="position-absolute bottom-0 start-0 p-3">
-                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i
-                                            class="bi bi-geo-alt me-2"></i>Oaxaca</div>
-                                </div>
-                            </div>
-
-                            <!-- Card body -->
-                            <div class="card-body bg-white-offs border-bottom px-2">
-                                <!-- Title -->
-                                <h5 class="card-title"><a href="#" class="stretched-link">Centro</a>
-                                </h5>
-                                <!-- Price and rating -->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">Muy pronto <small class="fw-light"></small>
-                                    </h6>
-                                    <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card END -->
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- Card START -->
-                        <div class="card card-img-scale overflow-hidden bg-transparent">
-                            <!-- Image and overlay -->
-                            <div class="card-img-scale-wrapper ">
-                                <!-- Image -->
-                                <img src="{% static 'login/assets/images/category/hotel/02.jpg' %} "
-                                    class="card-img border-top" alt="hotel image">
-                                <!-- Badge -->
-                                <div class="position-absolute bottom-0 start-0 p-3">
-                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i
-                                            class="bi bi-geo-alt me-2"></i>Verazcruz</div>
-                                </div>
-                            </div>
-
-                            <!-- Card body -->
-                            <div class="card-body px-2  bg-white-offs  border-bottom">
-                                <!-- Title -->
-                                <h5 class="card-title"><a href="#" class="stretched-link">Playa de
-                                        Casitas</a></h5>
-                                <!-- Price and rating -->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">Muy pronto <small class="fw-light"></small>
-                                    </h6>
-                                    <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card END -->
-                    </div>
-                    <div class="swiper-slide">
-                        <!-- Card START -->
-                        <div class="card card-img-scale overflow-hidden bg-transparent">
-                            <!-- Image and overlay -->
-                            <div class="card-img-scale-wrapper ">
-
-                                <!-- Image -->
-                                <img src="{% static 'login/assets/images/category/hotel/bitmap.webp' %} "
-                                    class="card-img border-top" alt="Huauchinango">
-                                <!-- Badge -->
-                                <div class="position-absolute bottom-0 start-0 p-3">
-                                    <div class="badge text-bg-dark fs-6 rounded-pill stretched-link"><i
-                                            class="bi bi-geo-alt me-2"></i>Huauchinango</div>
-                                </div>
-                            </div>
-
-                            <!-- Card body -->
-                            <div class="card-body px-2 border-bottom bg-white-offs">
-                                <!-- Title -->
-                                <h5 class="card-title"><a href="{% url 'view_detail_camara' %}"
-                                        class="stretched-link">Centro
-                                        - Desfile</a></h5>
-                                <!-- Price and rating -->
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-success mb-0">$0 <small class="fw-light">/ vista gratuita</small>
-                                    </h6>
-                                    <h6 class="mb-0">0<i class="fa-solid fa-star text-warning ms-1"></i> </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card END -->
-                    </div>
 
                 </div>
                 <div class="swiper-pagination"></div>
@@ -517,10 +301,7 @@ window.onscroll = function () {
 
         <h1 class=" titulo-trans text-center d-xl-none  d-flex z-3" style="font-size: 9vh; z-index: 2;"> SIEMPRE EN VIVO
         </h1>
-        <video preload="none" class="end-0 "  autoplay loop muted
-            style="border-radius: 10px !important; position: absolute; width: 90%; height: 100%; object-fit: cover; z-index: 1; filter: brightness(0.85); ">
-            <source src="https://turixcam-images.b-cdn.net/videos/principal/videofestival.mp4" type="video/mp4">
-        </video>
+ 
         <div class="container-fluid mt-5 " style="position: relative; z-index: 2;">
 
             <div class="row d-flex justify-content-start" style="margin-top: 10vh; margin-bottom: 10vh;">
