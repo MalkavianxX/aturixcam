@@ -10,7 +10,12 @@ urlpatterns = [
     path('buscar',views.view_init_page, name='view_init_page'),
     path('detalle',views.view_detail_camara, name="view_detail_camara"),
 
+    #temps
 
+    path('teco',views.teco, name='teco'),
+    path('apan',views.apan, name='apan'),
+    path('oaxaca',views.oaxaca, name='oaxaca'),
+    
     #funciones jsonresponse
     path('addFavorite',views.addFavorite, name='addFavorite'),
     path('addGuardado',views.addGuardado, name='addGuardado'),
